@@ -1,28 +1,13 @@
-FROM python:3.13-slim AS runtime
-
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
-ENV PIP_NO_CACHE_DIR=1
+FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       fonts-dejavu-core \
-    && rm -rf /var/lib/apt/lists/* \
-    && useradd -m appuser
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY pyproject.toml README.md ./
-COPY product_app ./product_app
-COPY docs ./docs
-COPY tests ./tests
+COPY . .
+COPY index.html ./index.html
 
-RUN python -m pip install --upgrade pip \
-    && python -m pip install . \
-    && chown -R appuser:appuser /app
+EXPOSE 8080
 
-USER appuser
-
-EXPOSE 8000
-
-CMD ["python", "-m", "product_app.webapp"]
+CMD ["uvicorn", "product_app.webapp:app", "--host", "0.0.0.0", "--port", "8080"]
