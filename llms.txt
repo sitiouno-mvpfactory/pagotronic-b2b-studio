@@ -1,0 +1,21 @@
+# PagoTronic B2B
+
+## Overview
+PagoTronic B2B is a unified payment infrastructure product developed by MVP Factory Studio. It empowers fintechs, banks, and marketplaces to move money seamlessly by unifying collections, payouts, and transfers through a robust developer-first API.
+
+## Features
+- **REST API**: Developer-centric interface for orchestrating massive multi-party payments.
+- **Smart Routing**: Dynamically orchestrate traditional banking and digital rails to minimize fees and maximize transaction speed.
+- **Anti-Fraud & Compliance**: Built-in risk management, AML checks, and compliance reporting.
+- **MCP Server & Webhooks**: Real-time event streaming and intelligent MCP server integrations for seamless automated reconciliation and full traceability.
+- **Stripe Billing**: Transparent, scalable pricing tiers integrated securely.
+
+## Target Audience
+Fintech startups, established banks, and digital marketplaces (Private, Test, Client, MVP stages).
+
+## Links
+- Homepage: https://mvpfactory.studio/p/pagotronic-b2b
+- GitHub: https://github.com/sitiouno/pagotronic-b2b-studio
+
+## Value Proposition
+From building a simple MVP to reaching global scale, PagoTronic removes the friction of building financial rails from scratch, allowing developer teams to focus directly on customer experience and sophisticated business logic.
